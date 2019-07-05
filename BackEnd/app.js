@@ -2,6 +2,7 @@ const  express = require('express');
 const app = express() ;
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
+const register = require('./api/register')
 
 const passport = require('passport');
 
@@ -19,14 +20,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/api/user/register',(res,req)=>{
+app.post('/api/user/register',(req,res)=>{
+    register.register(req,res);
 
 });
-app.get('/api/user/profile',(res,req)=>{
+app.get('/api/user/profile',(req,res)=>{
 
 });
 
-app.post('/api/user/login',(res,req)=>{
+app.post('/api/user/login',(req,res)=>{
 
 });
 
