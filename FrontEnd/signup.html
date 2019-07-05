@@ -1,0 +1,55 @@
+<h1>sign up</h1>
+
+<form name="signupForm">
+  <table>
+    <tr>
+      <td>First Name</td>
+      <td>
+        <input name="firstName" ng-model="user.firstName" required />
+      </td>
+      <td>
+        <span
+          ng-show="signupForm.firstName.$error.required && signupForm.firstName.$dirty"
+        >First Name is required </span>
+      </td>
+    </tr>
+    <tr>
+      <td>last Name</td>
+      <td>
+        <input name="lastName" ng-model="user.lastName" required />
+      </td>
+      <td>
+        <span
+          ng-show="signupForm.lastName.$error.required && signupForm.lastName.$dirty"
+        >last Name is required </span>
+      </td>
+    </tr>
+    <tr>
+      <td>user Name</td>
+      <td>
+        <input name="userName" ng-model="user.userName" required />
+      </td>
+      <td>
+        <span
+          ng-show="signupForm.userName.$error.required && signupForm.userName.$dirty"
+        >user Name is required</span>
+      </td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td>
+        <input name="password" ng-model="user.password" required />
+      </td>
+      <td>
+        <span
+          ng-show="signupForm.password.$error.required && signupForm.password.$dirty"
+        >password is required</span>
+      </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="button" ng-click="onSubmit()" value="Submit">
+        </td>
+    </tr>
+  </table>
+</form>
