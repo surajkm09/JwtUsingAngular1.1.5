@@ -1,0 +1,24 @@
+<h1>Login </h1>
+<form  name="loginForm">
+<table>
+    <tr>
+        <td>User Name</td>
+        <td><input type="text" name="userName" ng-model="user.userName" required></td>
+        <td><span class="error" ng-show="loginForm.userName.$error.required && loginForm.userName.$dirty">User Name Cannot be Empty</span></td>
+    </tr>
+    
+       
+    
+    <tr>
+        <td>password</td>
+        <td><input type="password" name="password" ng-model="user.password" required></td>
+        <td><span class="error" ng-show="loginForm.password.$error.required && loginForm.password.$dirty">password  Cannot be Empty</span></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+    <input type="button" ng-click="onSubmit()" value="Login">
+    </td>
+    </tr>
+</table>
+
+</form>
